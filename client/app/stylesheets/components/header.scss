@@ -1,0 +1,38 @@
+.header {
+  position: relative;
+  color: $color-text-primary;
+  background-color: $color-brand;
+  @include clearfix;
+  .nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li {
+      float: left;
+      a {
+        display: inline-block;
+        padding: $padding;
+        font-size: $icon-size-sm;
+        text-decoration: none;
+        color: $color-text-white;
+      }
+    }
+    &.left {
+      float: left;
+    }
+    &.right {
+      float: right;
+    }
+  }
+  .title {
+    position: absolute;
+    color: $color-text-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    > h1 {
+      margin: 0;
+      font-size: $font-size-lg;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.card {
+    margin-top: $margin-lg;
+    background-color: $color-white;
+    padding: $padding;
+    background-image: linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%),
+      linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+    background-size: 100% 1px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    .card-header {
+        > h3 {
+            margin: 0;
+            padding-left: $padding;
+            border-left: 4px solid $color-brand;
+        }
+    }
+    .card-content {
+        margin-top: $margin;
+        .items {
+            display: table;
+            .item {
+                display: table-cell;
+                width: 50%;
+                .item-cover {
+                    > img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

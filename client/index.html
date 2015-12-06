@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="tour">
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+  <base href="/">
+  <title>App</title>
+  <!-- build:cssBase stylesheets/base.css -->
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+  <!-- endbuild -->
+  <!-- build:cssApp stylesheets/app.css -->
+  <link rel="stylesheet" href="app/stylesheets/app.css">
+  <!-- endbuild -->
+</head>
+<body ng-controller="DrawerController">
+  <div class="drawer" ng-class="{open: drawerOpen}">
+    <div class="drawer-main">
+      <header class="header">
+        <ul class="nav left">
+          <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xe700;</a></li>
+        </ul>
+        <div class="title"><h1>走亲访友</h1></div>
+        <ul class="nav right">
+          <li><a href="javascript:;" class="iconfont">&#xe650;</a></li>
+        </ul>
+      </header>
+      <div class="container" ng-view></div>
+      <footer class="footer">
+        &copy; 2015 tour.com
+      </footer>
+      <div class="drawer-mask" ng-click="toggleDrawer()"></div>
+    </div>
+    <aside class="drawer-aside"></aside>
+  </div>
+  <!-- build:jsBase javascripts/base.js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- endbuild -->
+  <!-- build:jsApp javascripts/app.js -->
+  <script src="app/javascripts/app.js"></script>
+  <script src="app/javascripts/controllers/main.js"></script>
+  <script src="app/javascripts/controllers/drawer.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
