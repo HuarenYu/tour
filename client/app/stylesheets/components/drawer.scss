@@ -1,31 +1,33 @@
-.drawer {
-  .drawer-main {
-    position: relative;
-    transition: .5s linear transform;
-  }
-  .drawer-aside {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: $color-brand;
-    transition: .5s linear transform;
+.drawer-main {
+  position: relative;
+  transition: transform .5s linear;
+  .drawer-mask {
+    display: none;
   }
   &.open {
-    .drawer-main {
-      transform: translate(60%, 0);
-      .drawer-mask {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color-dark, .66);
-      }
+    transform: translateX(50%);
+    .drawer-mask {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-dark, .33);
     }
-    .drawer-aside {
-      transform: translate(60%, 0);
-    }
+  }
+}
+
+.drawer-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-brand;
+  transform: translateX(-100%);
+  transition: transform .5s linear;
+  &.open {
+    transform: translateX(-50%);
   }
 }

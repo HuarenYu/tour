@@ -5,13 +5,14 @@ var rev = require('gulp-rev');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
+var plumber = require('gulp-plumber');
 var rimraf = require('rimraf');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
-  return gulp.src(['app/stylesheets/base.scss', 'app/stylesheets/app.scss'])
-    .pipe(sass())
-    .pipe(sass().on('error', sass.logError))
+  return gulp.src(['./app/stylesheets/app.scss'])
+    .pipe(plumber())
+    .pipe(sass({includePaths: ['./app/stylesheets']}))
     .pipe(autoprefixer({
       browsers: ['> 5%', 'Last 2 versions'],
       cascade: false
@@ -54,4 +55,4 @@ gulp.task('dist', function () {
   
 });
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['sass', 'serve', 'watch']);

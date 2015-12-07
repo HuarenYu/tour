@@ -1,3 +1,8 @@
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
   color: $color-text-primary;
   background-color: $color-bg-body;
