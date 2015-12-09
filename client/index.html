@@ -20,7 +20,7 @@
       </ul>
       <div class="title"><h1>走亲访友</h1></div>
       <ul class="nav right">
-        <li><a href="javascript:;" class="iconfont">&#xe650;</a></li>
+        <li><a href="javascript:;" class="iconfont">&#xe65c;</a></li>
       </ul>
     </header>
     <div class="container" ng-view></div>
@@ -30,7 +30,14 @@
     <div class="drawer-mask" ng-click="toggleDrawer()"></div>
   </div>
   <aside class="drawer-aside" ng-class="{open: drawerOpen}">
-    <div class="aside-nav"></div>
+    <div class="aside-user"></div>
+    <div class="aside-nav">
+      <ul>
+        <li>目的地</li>
+        <li>游记</li>
+        <li>意见反馈</li>
+      </ul>
+    </div>
   </aside>
   <!-- build:jsBase javascripts/base.js -->
   <script src="bower_components/angular/angular.js"></script>

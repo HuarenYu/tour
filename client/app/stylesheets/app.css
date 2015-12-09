@@ -15,6 +15,7 @@
 
 body, html {
   width: 100%;
+  height: 100%;
   overflow-x: hidden; }
 
 body {
@@ -79,25 +80,43 @@ body {
 .card {
   margin-top: 20px;
   background-color: #FFFFFF;
-  padding: 10px;
   background-image: -webkit-linear-gradient(270deg, #ccc, #ccc 50%, transparent 50%), -webkit-linear-gradient(90deg, #ccc, #ccc 50%, transparent 50%);
   background-image: linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%), linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
   background-size: 100% 1px, 100% 1px;
   background-repeat: no-repeat;
   background-position: top, bottom; }
-  .card .card-header > h3 {
-    margin: 0;
+  .card .card-header {
+    padding: 10px; }
+    .card .card-header > h3 {
+      margin: 0;
+      padding-left: 10px;
+      border-left: 4px solid #4CAF50; }
+  .card .card-content .items:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .card .card-content .items .item {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-bottom: 10px;
     padding-left: 10px;
-    border-left: 4px solid #4CAF50; }
-  .card .card-content {
-    margin-top: 10px; }
-    .card .card-content .items {
-      display: table; }
-      .card .card-content .items .item {
-        display: table-cell;
-        width: 50%; }
-        .card .card-content .items .item .item-cover > img {
-          width: 100%; }
+    box-sizing: border-box; }
+    .card .card-content .items .item .item-cover > img {
+      width: 100%; }
+    .card .card-content .items .item .item-info {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      padding: 4px;
+      border-radius: 2px;
+      background-color: rgba(0, 0, 0, 0.33);
+      color: #FFFFFF; }
+    .card .card-content .items .item:nth-child(odd) {
+      padding-right: 5px; }
+    .card .card-content .items .item:nth-child(even) {
+      padding-right: 10px;
+      padding-left: 5px; }
 
 .footer {
   padding: 20px 0;
@@ -139,3 +158,24 @@ body {
   .drawer-aside.open {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%); }
+
+.posts .post {
+  min-height: 130px;
+  position: relative;
+  padding-left: 220px;
+  padding-right: 10px; }
+  .posts .post .post-cover {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left: 10px;
+    top: 0; }
+    .posts .post .post-cover > img {
+      width: 100%;
+      height: 100%; }
+  .posts .post .post-info .post-title {
+    margin: 0; }
+  .posts .post .post-info .post-excerpt {
+    margin: 0;
+    margin-top: 10px;
+    line-height: 1.7; }
