@@ -146,7 +146,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background-color: #4CAF50;
   -webkit-transform: translateX(-100%);
@@ -156,8 +156,29 @@ body {
   transition: transform .5s linear;
   transition: transform .5s linear, -webkit-transform .5s linear; }
   .drawer-aside.open {
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
+  .drawer-aside .aside-user {
+    text-align: center; }
+    .drawer-aside .aside-user .user-avatar {
+      text-align: center;
+      padding: 10px; }
+      .drawer-aside .aside-user .user-avatar > img {
+        vertical-align: top;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px; }
+    .drawer-aside .aside-user .user-action {
+      color: #FFFFFF; }
+      .drawer-aside .aside-user .user-action > a {
+        color: #FFFFFF;
+        text-decoration: none; }
+  .drawer-aside .aside-nav {
+    padding: 10px 10px; }
+    .drawer-aside .aside-nav > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
 
 .posts .post {
   min-height: 130px;

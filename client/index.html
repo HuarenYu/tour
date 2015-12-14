@@ -30,12 +30,16 @@
     <div class="drawer-mask" ng-click="toggleDrawer()"></div>
   </div>
   <aside class="drawer-aside" ng-class="{open: drawerOpen}">
-    <div class="aside-user"></div>
+    <div class="aside-user">
+      <div class="user-avatar"><img src="app/images/default-avatar.png" alt="user-avatar"></div>
+      <div class="user-action"><a href="#">注册</a>|<a href="#">登录</a></div>
+    </div>
     <div class="aside-nav">
       <ul>
-        <li>目的地</li>
-        <li>游记</li>
-        <li>意见反馈</li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">目的地</a></li>
+        <li><a href="#">游记</a></li>
+        <li><a href="#">意见反馈</a></li>
       </ul>
     </div>
   </aside>
