@@ -36,21 +36,37 @@
     </div>
     <div class="aside-nav">
       <ul>
-        <li><a href="#">首页</a></li>
+        <li><a href="/">首页</a></li>
         <li><a href="#">目的地</a></li>
         <li><a href="#">游记</a></li>
+        <li><a href="#">活动</a></li>
         <li><a href="#">意见反馈</a></li>
       </ul>
     </div>
   </aside>
+  <script type="text/javascript">
+  if (window.devicePixelRatio && devicePixelRatio >= 2) {
+    var testElem = document.createElement('div');
+    testElem.style.border = '.5px solid transparent';
+    document.body.appendChild(testElem);
+    if (testElem.offsetHeight == 1) {
+      document.querySelector('html').classList.add('hairlines');
+    }
+    document.body.removeChild(testElem);
+  }
+  </script>
   <!-- build:jsBase javascripts/base.js -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <!-- endbuild -->
   <!-- build:jsApp javascripts/app.js -->
   <script src="app/javascripts/app.js"></script>
-  <script src="app/javascripts/controllers/main.js"></script>
-  <script src="app/javascripts/controllers/drawer.js"></script>
+  <script src="app/javascripts/controllers/Main.js"></script>
+  <script src="app/javascripts/controllers/Drawer.js"></script>
+  <script src="app/javascripts/controllers/Landscape.js"></script>
+  <script src="app/javascripts/controllers/LandscapeList.js"></script>
+  <script src="app/javascripts/controllers/Post.js"></script>
+  <script src="app/javascripts/controllers/PostList.js"></script>
   <!-- endbuild -->
 </body>
 </html>

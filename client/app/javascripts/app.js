@@ -9,7 +9,7 @@
           templateUrl: 'app/views/main.html',
           controller: 'MainController'
         })
-        .when('/landscape', {
+        .when('/landscapes/:locationId', {
           templateUrl: 'app/views/landscape-list.html',
           controller: 'LandscapeListController'
         })
@@ -17,7 +17,7 @@
           templateUrl: 'app/views/landscape.html',
           controller: 'LandscapeController'
         })
-        .when('/post', {
+        .when('/posts', {
           templateUrl: 'app/views/post-list.html',
           controller: 'PostListController'
         })
@@ -30,4 +30,5 @@
         });
       $locationProvider.html5Mode(true);
     });
+
 }();

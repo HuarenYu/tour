@@ -2,6 +2,7 @@
 @import "variables";
 @import "mixins";
 
+@import "components/typography";
 @import "components/icons";
 @import "components/layout";
 @import "components/header";
@@ -9,4 +10,5 @@
 @import "components/card";
 @import "components/footer";
 @import "components/drawer";
-@import "components/post"
+@import "components/post";
+@import "components/landscape"

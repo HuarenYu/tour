@@ -1,0 +1,38 @@
+.landscape-filter {
+  height: 40px;
+  background-color: $color-white;
+  border-bottom: 1px solid darken($color-bg-body, 10%);
+}
+
+.landscape-list {
+  .landscape {
+    position: relative;
+    margin-top: $margin;
+    padding-left: 170px;
+    height: 100px;
+    background-color: $color-white;
+    .landscape-pics {
+      position: absolute;
+      width: 160px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      > img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .landscape-info {
+      p {
+        margin: 0;
+      }
+      .title {
+        font-size: 14px;
+      }
+      .desc {
+        color: $color-text-secondary;
+      }
+    }
+  }
+}

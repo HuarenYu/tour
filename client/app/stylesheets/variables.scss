@@ -2,11 +2,13 @@
 $color-brand: #4CAF50;
 $color-dark: #000000;
 $color-white: #FFFFFF;
+
 $color-text-white: #FFFFFF;
 $color-text: #000000;
-$color-text-primary: rgba($color-text, .87);
-$color-text-secondary: rgba($color-text, .54);
-$color-text-hint: rgba($color-text, .38);
+$color-text-primary: lighten($color-text, 33.5%);
+$color-text-secondary: lighten($color-text, 46.7%);
+$color-text-hint: lighten($color-text, 93.5%);
+
 $color-bg-body: #eaeaea;
 
 //font
@@ -30,4 +32,3 @@ $margin-lg: 20px;
 
 //border
 $border-color: rgba($color-dark, .12);
-

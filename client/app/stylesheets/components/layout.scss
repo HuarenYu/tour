@@ -7,4 +7,10 @@ body, html {
 body {
   color: $color-text-primary;
   background-color: $color-bg-body;
+  font-size: 12px;
+}
+
+.hairlines div,
+.hairlines section {
+  border-width: 0.5px;
 }

@@ -8,6 +8,7 @@ var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 var rimraf = require('rimraf');
 var browserSync = require('browser-sync').create();
+var historyApiFallback = require('connect-history-api-fallback')
 
 gulp.task('sass', function () {
   return gulp.src(['./app/stylesheets/app.scss'])
@@ -27,7 +28,8 @@ gulp.task('sass-reload', ['sass'], function () {
 gulp.task('serve', function () {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: './',
+      middleware: [ historyApiFallback() ]
     }
   });
 });
@@ -51,8 +53,6 @@ gulp.task('watch', function () {
   gulp.watch('app/stylesheets/**/*.scss', ['sass-reload']);
 });
 
-gulp.task('dist', function () {
-  
-});
+gulp.task('dist', ['usemin']);
 
 gulp.task('default', ['sass', 'serve', 'watch']);
