@@ -1,1 +1,0 @@
-!function(){"use strict";angular.module("tour",["ngRoute"]).config(function(o,n){o.when("/",{templateUrl:"app/views/main.html",controller:"MainController"}).otherwise({redirectTo:"/"}),n.html5Mode(!0)})}(),!function(){"use strict";function o(){console.log("main controller")}angular.module("tour").controller("MainController",o)}();

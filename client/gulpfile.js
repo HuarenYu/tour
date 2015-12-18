@@ -35,7 +35,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('clean', function (cb) {
-  rimraf('./dist', cb);
+  rimraf('./dist/**/*.*', cb);
 });
 
 gulp.task('usemin', ['clean'], function () {
