@@ -16,14 +16,14 @@
   <div class="drawer-main" ng-class="{open: drawerOpen}">
     <header class="header">
       <ul class="nav left">
-        <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xe700;</a></li>
+        <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xf020e;</a></li>
       </ul>
       <div class="title"><h1>走亲访友</h1></div>
       <ul class="nav right">
-        <li><a href="javascript:;" class="iconfont">&#xe65c;</a></li>
+        <li><a href="javascript:;" class="iconfont">&#xf01fd;</a></li>
       </ul>
     </header>
-    <div class="container" ng-view></div>
+    <div class="container" ng-view autoscroll></div>
     <footer class="footer">
       &copy; 2015 tour.com
     </footer>
@@ -40,7 +40,10 @@
         <li><a href="#">目的地</a></li>
         <li><a href="#">游记</a></li>
         <li><a href="#">活动</a></li>
+      </ul>
+      <ul>
         <li><a href="#">意见反馈</a></li>
+        <li><a href="#">关于我们</a></li>
       </ul>
     </div>
   </aside>
@@ -61,8 +64,8 @@
   <!-- endbuild -->
   <!-- build:jsApp javascripts/app.js -->
   <script src="app/javascripts/app.js"></script>
-  <script src="app/javascripts/controllers/Main.js"></script>
   <script src="app/javascripts/controllers/Drawer.js"></script>
+  <script src="app/javascripts/controllers/Main.js"></script>
   <script src="app/javascripts/controllers/Landscape.js"></script>
   <script src="app/javascripts/controllers/LandscapeList.js"></script>
   <script src="app/javascripts/controllers/Post.js"></script>

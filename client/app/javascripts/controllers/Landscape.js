@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tour')
+    .module('tour.controllers', [])
     .controller('LandscapeController', LandscapeController);
 
   function LandscapeController($scope) {

@@ -53,13 +53,17 @@
     }
   }
   .aside-nav {
-    background-color: $color-white;
     > ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      background-color: $color-white;
+      border-top: 1px solid darken($color-bg-body, 10%);
       > li {
-        border-bottom: 1px solid darken($color-bg-body, 10%);
+        border: 1px solid darken($color-bg-body, 10%);
+        border-right: none;
+        border-left: none;
+        border-top: none;
         > a {
           display: block;
           padding: $padding;
@@ -73,6 +77,11 @@
 
           }
         }
+      }
+      margin-top: $margin-lg;
+      &:first-child {
+        border-top: none;
+        margin-top: 0;
       }
     }
   }

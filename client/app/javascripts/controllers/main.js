@@ -1,8 +1,8 @@
 !function () {
   'use strict';
-  
+
   angular
-    .module('tour')
+    .module('tour.controllers', [])
     .controller('MainController', MainController);
 
   function MainController() {

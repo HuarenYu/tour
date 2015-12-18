@@ -1,7 +1,15 @@
 .landscape-filter {
-  height: 40px;
   background-color: $color-white;
   border-bottom: 1px solid darken($color-bg-body, 10%);
+  .landscape-current {
+    padding: $padding;
+    .gt {
+      margin: 0 $padding;
+    }
+    .collapse-toggle {
+      float: right;
+    }
+  }
 }
 
 .landscape-list {
@@ -26,12 +34,19 @@
     .landscape-info {
       p {
         margin: 0;
+        line-height: 1.7;
       }
       .title {
-        font-size: 14px;
+        font-size: $font-size-sm;
       }
       .desc {
         color: $color-text-secondary;
+      }
+      .fee {
+        .price {
+          font-size: $font-size-md;
+          color: #ff6000;
+        }
       }
     }
   }
