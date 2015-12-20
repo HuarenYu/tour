@@ -54,7 +54,9 @@ gulp.task('watch', function () {
 });
 
 gulp.task('copy-assets', function () {
-  return gulp.src(['./app/fonts/**/*.*', './app/images/**/*.*'], {base: './'})
+  return gulp.src(['./app/fonts/**/*.*',
+                  './app/images/**/*.*',
+                './app/views/**/*.*'], {base: './'})
     .pipe(gulp.dest('./dist'));
 });
 
