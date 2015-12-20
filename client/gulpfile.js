@@ -53,6 +53,11 @@ gulp.task('watch', function () {
   gulp.watch('app/stylesheets/**/*.scss', ['sass-reload']);
 });
 
+gulp.task('copy-assets', function () {
+  return gulp.src(['./app/fonts/**/*.*', './app/images/**/*.*'], {base: './'})
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('dist', ['usemin']);
 
 gulp.task('default', ['sass', 'serve', 'watch']);

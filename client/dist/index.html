@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
   <base href="/">
   <title>App</title>
-  <link rel="stylesheet" href="stylesheets/base-db1aae18a5.css"/>
-  <link rel="stylesheet" href="stylesheets/app-7341a7dd13.css"/>
+  <link rel="stylesheet" href="app/stylesheets/base-db1aae18a5.css"/>
+  <link rel="stylesheet" href="app/stylesheets/app-87d47b16f5.css"/>
 </head>
-<body ng-controller="DrawerController">
+<body ng-controller="DrawerController" ng-class="bodyClass">
   <div class="drawer-main" ng-class="{open: drawerOpen}">
     <header class="header">
       <ul class="nav left">
-        <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xe700;</a></li>
+        <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xf020e;</a></li>
       </ul>
       <div class="title"><h1>走亲访友</h1></div>
       <ul class="nav right">
-        <li><a href="javascript:;" class="iconfont">&#xe65c;</a></li>
+        <li><a href="javascript:;" class="iconfont">&#xf01fd;</a></li>
       </ul>
     </header>
-    <div class="container" ng-view></div>
+    <div class="container" ng-view autoscroll></div>
     <footer class="footer">
       &copy; 2015 tour.com
     </footer>
-    <div class="drawer-mask" ng-click="toggleDrawer()"></div>
+    <div class="drawer-mask" ng-class="{open: drawerOpen}" ng-click="toggleDrawer()"></div>
   </div>
   <aside class="drawer-aside" ng-class="{open: drawerOpen}">
     <div class="aside-user">
@@ -31,12 +31,15 @@
       <div class="user-action"><a href="#">注册</a>|<a href="#">登录</a></div>
     </div>
     <div class="aside-nav">
-      <ul>
-        <li><a href="/">首页</a></li>
-        <li><a href="#">目的地</a></li>
-        <li><a href="#">游记</a></li>
-        <li><a href="#">活动</a></li>
-        <li><a href="#">意见反馈</a></li>
+      <ul data-hairline="true">
+        <li data-hairline="true"><a href="/">首页</a></li>
+        <li data-hairline="true"><a href="#">目的地</a></li>
+        <li data-hairline="true"><a href="#">游记</a></li>
+        <li data-hairline="true"><a href="#">活动</a></li>
+      </ul>
+      <ul data-hairline="true">
+        <li data-hairline="true"><a href="/feedback">意见反馈</a></li>
+        <li data-hairline="true"><a href="/about">关于我们</a></li>
       </ul>
     </div>
   </aside>
@@ -51,7 +54,7 @@
     document.body.removeChild(testElem);
   }
   </script>
-  <script src="javascripts/base-00883b1c4f.js"></script>
-  <script src="javascripts/app-3d9f83ea6f.js"></script>
+  <script src="app/javascripts/base-00883b1c4f.js"></script>
+  <script src="app/javascripts/app-11f4187845.js"></script>
 </body>
 </html>
