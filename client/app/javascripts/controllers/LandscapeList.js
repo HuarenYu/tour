@@ -5,7 +5,7 @@
     .module('tour')
     .controller('LandscapeListController', LandscapeListController);
 
-  LandscapeListController.$scope = ['$scope'];
+  LandscapeListController.$inject = ['$scope'];
   function LandscapeListController($scope) {
     var vm = $scope;
     vm.filterToggle = false;
