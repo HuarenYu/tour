@@ -175,8 +175,7 @@ body {
   -webkit-transition: -webkit-transform .5s linear;
   transition: -webkit-transform .5s linear;
   transition: transform .5s linear;
-  transition: transform .5s linear, -webkit-transform .5s linear;
-  border-right: 1px solid #d1d1d1; }
+  transition: transform .5s linear, -webkit-transform .5s linear; }
   .drawer-aside.open {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); }

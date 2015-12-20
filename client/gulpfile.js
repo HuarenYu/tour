@@ -38,7 +38,7 @@ gulp.task('clean', function (cb) {
   rimraf('./dist/**/*.*', cb);
 });
 
-gulp.task('usemin', ['clean'], function () {
+gulp.task('usemin', ['clean', 'sass'], function () {
   return gulp.src('index.html')
     .pipe(usemin({
       cssBase: [minifyCss(), rev()],
@@ -56,7 +56,7 @@ gulp.task('watch', function () {
 gulp.task('copy-assets', function () {
   return gulp.src(['./app/fonts/**/*.*',
                   './app/images/**/*.*',
-                './app/views/**/*.*'], {base: './'})
+                  './app/views/**/*.*'], {base: './'})
     .pipe(gulp.dest('./dist'));
 });
 
