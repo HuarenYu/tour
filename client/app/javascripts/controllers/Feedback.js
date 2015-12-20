@@ -3,9 +3,9 @@
 
   angular
     .module('tour')
-    .controller('MainController', MainController);
+    .controller('FeedbackController', FeedbackController);
 
-  function MainController() {
+  function FeedbackController() {
     var vm = this;
 
   }

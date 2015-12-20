@@ -31,4 +31,4 @@ $margin: 10px;
 $margin-lg: 20px;
 
 //border
-$border-color: rgba($color-dark, .12);
+$border-color: darken($color-bg-body, 10%);

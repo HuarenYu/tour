@@ -29,8 +29,8 @@
                 }
                 .item-info {
                     position: absolute;
-                    left: 20px;
-                    bottom: 20px;
+                    left: $margin;
+                    bottom: $margin-lg;
                     padding: 4px;
                     border-radius: 2px;
                     background-color: rgba($color-dark, .33);

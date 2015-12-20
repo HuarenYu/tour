@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tour.controllers', [])
+    .module('tour')
     .controller('PostListController', PostListController);
 
   function PostListController($scope) {

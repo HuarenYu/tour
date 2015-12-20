@@ -2,35 +2,38 @@
   'use strict';
 
   angular
-    .module('tour', ['ngRoute', 'tour.controllers'])
+    .module('tour', ['ngRoute'])
     .config(config);
 
     function config($routeProvider, $locationProvider) {
       $routeProvider
         .when('/', {
           templateUrl: 'app/views/main.html',
-          controller: 'MainController',
-          controllerAs: 'vm'
+          controller: 'MainController'
         })
         .when('/landscapes/:locationId', {
           templateUrl: 'app/views/landscape-list.html',
-          controller: 'LandscapeListController',
-          controllerAs: 'landscapeList'
+          controller: 'LandscapeListController'
         })
         .when('/landscape/:id', {
           templateUrl: 'app/views/landscape.html',
-          controller: 'LandscapeController',
-          controllerAs: 'landscape'
+          controller: 'LandscapeController'
         })
         .when('/posts', {
           templateUrl: 'app/views/post-list.html',
-          controller: 'PostListController',
-          controllerAs: 'postList'
+          controller: 'PostListController'
         })
         .when('/post/:id', {
           templateUrl: 'app/views/post.html',
-          controller: 'PostController',
-          controllerAs: 'post'
+          controller: 'PostController'
+        })
+        .when('/feedback', {
+          templateUrl: 'app/views/feedback.html',
+          controller: 'FeedbackController'
+        })
+        .when('/about', {
+          templateUrl: 'app/views/about.html',
+          controller: 'AboutController'
         })
         .otherwise({
           redirectTo: '/'

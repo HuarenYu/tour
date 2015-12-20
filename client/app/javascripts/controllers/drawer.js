@@ -2,13 +2,11 @@
   'use strict';
 
   angular
-    .module('tour.controllers', [])
+    .module('tour')
     .controller('DrawerController', DrawerController);
 
-  function DrawerController() {
-    console.log(this);
-    /*
-    var vm = this;
+  function DrawerController($scope) {
+    var vm = $scope;
     vm.drawerOpen = false;
     vm.toggleDrawer = function() {
       vm.drawerOpen = !vm.drawerOpen;
@@ -16,7 +14,7 @@
     vm.$on('$routeChangeStart', function () {
       vm.drawerOpen = false;
     });
-    */
+
   }
 
 }();

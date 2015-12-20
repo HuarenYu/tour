@@ -1,6 +1,10 @@
-body, html {
-    width: 100%;
-    overflow-x: hidden;
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -9,7 +13,10 @@ body {
   font-size: 12px;
 }
 
-.hairlines div,
-.hairlines section {
-  border-width: 0.5px;
+.hairlines *[data-hairline="true"] {
+  border-width: 0.5px !important;
+}
+
+.container {
+  min-height: 700px;
 }

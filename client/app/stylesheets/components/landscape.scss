@@ -1,23 +1,81 @@
 .landscape-filter {
+  position: relative;
   background-color: $color-white;
+  height: 40px;
   border-bottom: 1px solid darken($color-bg-body, 10%);
   .landscape-current {
-    padding: $padding;
-    .gt {
-      margin: 0 $padding;
+    padding-left: $padding;
+    @include clearfix;
+    .bread-nav {
+      float: left;
+      line-height: 40px;
+      .gt {
+        margin: 0 $padding;
+      }
     }
     .collapse-toggle {
       float: right;
+      border-left: 1px solid $border-color;
+      .iconfont {
+        line-height: 40px;
+        padding: 0 $padding;
+        display: inline-block;
+        transition: transform .5s linear;
+      }
+      &.open {
+        > .iconfont {
+          transform: rotateZ(180deg);
+        }
+      }
     }
   }
 }
 
+.landscape-all {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  z-index: 10;
+  border-bottom: 1px solid darken($color-bg-body, 10%);
+  &.open {
+    display: block;
+  }
+  .top-locations {
+    display: inline-block;
+    width: 100px;
+    border-right: 1px solid darken($color-bg-body, 10%);
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      > li {
+        padding: $padding;
+        font-size: $font-size-md;
+        text-align: center;
+        border-bottom: 1px solid darken($color-bg-body, 10%);
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .sub-locations {
+    display: inline-block;
+  }
+}
+
 .landscape-list {
+  padding-top: $padding;
   .landscape {
+    display: block;
     position: relative;
-    margin-top: $margin;
+    margin-bottom: $margin;
     padding-left: 170px;
     height: 100px;
+    text-decoration: none;
     background-color: $color-white;
     .landscape-pics {
       position: absolute;
@@ -25,6 +83,7 @@
       height: 100px;
       top: 0;
       left: 0;
+      padding: $padding/2;
       > img {
         vertical-align: top;
         width: 100%;
@@ -32,22 +91,93 @@
       }
     }
     .landscape-info {
-      p {
-        margin: 0;
-        line-height: 1.7;
-      }
+      padding-right: $padding;
+      line-height: 1.7;
+      color: $color-text-primary;
       .title {
         font-size: $font-size-sm;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
       .desc {
         color: $color-text-secondary;
+        height: 50px;
+        overflow: hidden;
       }
       .fee {
+        text-align: right;
         .price {
           font-size: $font-size-md;
           color: #ff6000;
         }
+        .unit {
+          margin-left: $margin/2;
+          color: $color-text-secondary;
+        }
       }
     }
+  }
+}
+
+.landscape-detail {
+  .landscape-captures {
+    position: relative;
+    > img {
+      vertical-align: top;
+      width: 100%;
+    }
+    .landscape-name {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: $color-white;
+      padding: $padding;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .0), rgba(0, 0, 0, .88));
+    }
+  }
+  .landscape-brief {
+    padding: $padding;
+    background-color: $color-white;
+    border-bottom: 1px solid darken($color-bg-body, 10%);
+  }
+  .landscape-item {
+    margin-top: $margin-lg;
+    background-color: $color-white;
+    border-top: 1px solid darken($color-bg-body, 10%);
+    border-bottom: 1px solid darken($color-bg-body, 10%);
+    .detail-title {
+      padding: $padding;
+      font-size: $font-size-md;
+      border-bottom: 1px solid darken($color-bg-body, 10%);
+    }
+    .detail-content {
+      padding: $padding;
+    }
+  }
+}
+
+.landscape-actions {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-white;
+  border-top: 1px solid darken($color-bg-body, 10%);
+  > .left,
+    .right {
+      float: left;
+      width: 50%;
+      padding: $padding;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+body {
+  &.landscape-detail {
+    padding-bottom: 40px;
   }
 }

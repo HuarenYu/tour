@@ -2,11 +2,12 @@
   'use strict';
 
   angular
-    .module('tour.controllers', [])
+    .module('tour')
     .controller('LandscapeController', LandscapeController);
 
   function LandscapeController($scope) {
     var vm = $scope;
+    vm.$parent.bodyClass = "landscape-detail";
   }
 
 }();
