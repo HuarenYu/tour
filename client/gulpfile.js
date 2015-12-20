@@ -58,6 +58,6 @@ gulp.task('copy-assets', function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('dist', ['usemin']);
+gulp.task('dist', ['usemin', 'copy-assets']);
 
 gulp.task('default', ['sass', 'serve', 'watch']);
