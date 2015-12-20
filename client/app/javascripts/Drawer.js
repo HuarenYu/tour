@@ -5,6 +5,7 @@
     .module('tour')
     .controller('DrawerController', DrawerController);
 
+  DrawerController.$inject = ['$scope'];
   function DrawerController($scope) {
     var vm = $scope;
     vm.drawerOpen = false;

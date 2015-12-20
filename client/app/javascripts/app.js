@@ -5,6 +5,8 @@
     .module('tour', ['ngRoute'])
     .config(config);
 
+    config.$inject = ['$routeProvider', '$locationProvider'];
+
     function config($routeProvider, $locationProvider) {
       $routeProvider
         .when('/', {

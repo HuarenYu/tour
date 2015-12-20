@@ -5,8 +5,9 @@
     .module('tour')
     .controller('FeedbackController', FeedbackController);
 
-  function FeedbackController() {
-    var vm = this;
+  FeedbackController.$inject = ['$scope'];
+  function FeedbackController($scope) {
+    var vm = $scope;
 
   }
 

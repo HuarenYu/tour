@@ -5,8 +5,9 @@
     .module('tour')
     .controller('MainController', MainController);
 
-  function MainController() {
-    var vm = this;
+  MainController.$inject = ['$scope'];
+  function MainController($scope) {
+    var vm = $scope;
 
   }
 
