@@ -8,6 +8,8 @@
   DestinationListController.$inject = ['$scope'];
   function DestinationListController($scope) {
     var vm = $scope;
+    vm.$parent.drawerToggle = true;
+    vm.$parent.backToggle = false;
   }
 
 }();

@@ -16,9 +16,10 @@
   <div class="drawer-main" ng-class="{open: drawerOpen}">
     <header class="header">
       <ul class="nav left">
-        <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xf020e;</a></li>
+        <li ng-show="drawerToggle"><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xf020e;</a></li>
+        <li ng-show="backToggle"><a href="javascript:;" ng-click="back()" class="iconfont">&#xf0223;</a></li>
       </ul>
-      <div class="title"><h1>走亲访友</h1></div>
+      <div class="title"><h1>{{title}}</h1></div>
       <ul class="nav right">
         <li><a href="javascript:;" class="iconfont">&#xf01fd;</a></li>
       </ul>
