@@ -402,3 +402,44 @@ body.landscape-detail {
 .btn-primary {
   background-color: #4CAF50;
   border: 1px solid #3d8b40; }
+
+.destination-list > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .destination-list > ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .destination-list > ul > li {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .destination-list > ul > li:nth-child(odd) {
+      padding-right: 5px; }
+    .destination-list > ul > li:nth-child(even) {
+      padding-left: 5px; }
+    .destination-list > ul > li > a {
+      display: block;
+      position: relative; }
+      .destination-list > ul > li > a .cover {
+        width: 100%;
+        vertical-align: top; }
+      .destination-list > ul > li > a .caption-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.33); }
+        .destination-list > ul > li > a .caption-wrapper .caption {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          color: #FFFFFF;
+          text-align: center; }

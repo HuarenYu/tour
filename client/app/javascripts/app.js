@@ -13,6 +13,10 @@
           templateUrl: 'app/views/main.html',
           controller: 'MainController'
         })
+        .when('/destinationList', {
+          templateUrl: 'app/views/destination-list.html',
+          controller: 'DestinationListController'
+        })
         .when('/landscapes/:locationId', {
           templateUrl: 'app/views/landscape-list.html',
           controller: 'LandscapeListController'
