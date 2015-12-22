@@ -219,10 +219,12 @@ body {
       margin-top: 0; }
 
 .posts .post {
+  display: block;
   min-height: 130px;
   position: relative;
   padding-left: 220px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  text-decoration: none; }
   .posts .post .post-cover {
     position: absolute;
     width: 200px;
@@ -233,9 +235,31 @@ body {
       width: 100%;
       height: 100%; }
   .posts .post .post-info .post-title {
+    color: #555555;
     font-size: 14px; }
   .posts .post .post-info .post-excerpt {
     color: #777777; }
+
+.post-detail {
+  background-color: #FFFFFF; }
+  .post-detail .post-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden; }
+    .post-detail .post-header .post-info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.88));
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.88)); }
+      .post-detail .post-header .post-info .post-title {
+        color: #FFFFFF; }
+      .post-detail .post-header .post-info .post-author {
+        color: #FFFFFF; }
+  .post-detail .post-content {
+    padding: 10px; }
 
 .landscape-filter {
   position: relative;
