@@ -261,6 +261,33 @@ body {
   .post-detail .post-content {
     padding: 10px; }
 
+.post-list > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .post-list > ul > li {
+    padding: 10px; }
+    .post-list > ul > li > .post {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      height: 80px;
+      padding-left: 120px;
+      background-color: #FFFFFF; }
+      .post-list > ul > li > .post > .post-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 80px; }
+        .post-list > ul > li > .post > .post-cover > img {
+          height: 100%;
+          width: 100%; }
+      .post-list > ul > li > .post > .post-title {
+        padding: 10px;
+        font-size: 18px;
+        color: #555555; }
+
 .landscape-filter {
   position: relative;
   background-color: #FFFFFF;
