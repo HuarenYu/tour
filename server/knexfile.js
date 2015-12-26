@@ -7,7 +7,7 @@ module.exports = {
     connection: {
       database: 'tour_dev',
       user:     'root',
-      password: 'yuhuaren'
+      password: ''
     },
     pool: {
       min: 2,
