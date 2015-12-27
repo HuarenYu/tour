@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="tour">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+  <base href="/">
+  <title>App</title>
+  <link rel="stylesheet" href="app/stylesheets/base-db1aae18a5.css"/>
+  <link rel="stylesheet" href="app/stylesheets/app-e296cea23b.css"/>
+</head>
+<body ng-controller="DrawerController" ng-class="bodyClass">
+  <div class="drawer-main" ng-class="{open: drawerOpen}">
+    <header class="header">
+      <ul class="nav left">
+        <li><a href="javascript:;" ng-click="toggleDrawer()" class="iconfont">&#xf020e;</a></li>
+      </ul>
+      <div class="title"><h1>走亲访友</h1></div>
+      <ul class="nav right">
+        <li><a href="javascript:;" class="iconfont">&#xf01fd;</a></li>
+      </ul>
+    </header>
+    <div class="container" ng-view autoscroll></div>
+    <footer class="footer">
+      &copy; 2015 tour.com
+    </footer>
+    <div class="drawer-mask" ng-class="{open: drawerOpen}" ng-click="toggleDrawer()"></div>
+  </div>
+  <aside class="drawer-aside" ng-class="{open: drawerOpen}">
+    <div class="aside-user">
+      <div class="user-avatar"><img src="app/images/default-avatar.png" alt="user-avatar"></div>
+      <div class="user-action"><a href="#">注册</a>|<a href="#">登录</a></div>
+    </div>
+    <div class="aside-nav">
+      <ul data-hairline="true">
+        <li data-hairline="true"><a href="/">首页</a></li>
+        <li data-hairline="true"><a href="#">目的地</a></li>
+        <li data-hairline="true"><a href="#">游记</a></li>
+        <li data-hairline="true"><a href="#">活动</a></li>
+      </ul>
+      <ul data-hairline="true">
+        <li data-hairline="true"><a href="/feedback">意见反馈</a></li>
+        <li data-hairline="true"><a href="/about">关于我们</a></li>
+      </ul>
+    </div>
+  </aside>
+  <script type="text/javascript">
+  if (window.devicePixelRatio && devicePixelRatio >= 2) {
+    var testElem = document.createElement('div');
+    testElem.style.border = '.5px solid transparent';
+    document.body.appendChild(testElem);
+    if (testElem.offsetHeight == 1) {
+      document.querySelector('html').classList.add('hairlines');
+    }
+    document.body.removeChild(testElem);
+  }
+  </script>
+  <script src="app/javascripts/base-00883b1c4f.js"></script>
+  <script src="app/javascripts/app-a08e4c2cbb.js"></script>
+</body>
+</html>
