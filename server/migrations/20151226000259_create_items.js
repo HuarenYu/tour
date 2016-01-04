@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  knex.schema.createTable('t_landscapes', (table) => {
+  return knex.schema.createTable('t_items', (table) => {
     table.increments('id').primary();
     table.integer('owner_id');
     table.integer('location_id');
@@ -14,5 +14,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('t_landscapes');
+  return knex.schema.dropTable('t_items');
 };

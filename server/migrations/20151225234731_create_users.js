@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  knex.schema.createTable('t_users', (table) => {
+  return knex.schema.createTable('t_users', (table) => {
     table.increments('id').primary();
     table.string('username', 32);
     table.string('mobile_phone', 16);
@@ -23,10 +23,16 @@ exports.up = function(knex, Promise) {
     table.string('unionid', 128);
     table.string('remark');
     table.integer('groupid');
+    //用户类型
+    //1 微信 2 注册
+    table.integer('user_type');
+    //用户角色
+    //customer dealer admin
+    table.string('user_roles');
     table.timestamps();
   });
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('t_users');
+  return knex.schema.dropTable('t_users');
 };

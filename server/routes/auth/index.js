@@ -1,8 +1,12 @@
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 
+var User = require('../../models/user');
+
 router.post('/login', (req, res, next) => {
-  res.json({message: 'cool'});
+
 });
 
 router.post('/register', (req, res, next) => {
