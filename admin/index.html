@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app="tour-admin">
+<html lang="zh-CN" ng-app="tour.admin">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
@@ -7,13 +7,12 @@
   <title>App</title>
   <!-- build:cssBase app/stylesheets/base.css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
   <!-- endbuild -->
   <!-- build:cssApp app/stylesheets/app.css -->
   <link rel="stylesheet" href="app/stylesheets/app.css">
   <!-- endbuild -->
 </head>
-<body>
+<body style="padding-top:60px;">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -55,12 +54,19 @@
   <!-- build:jsBase app/javascripts/base.js -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
   <!-- endbuild -->
   <!-- build:jsApp app/javascripts/app.js -->
-  <script src="app/javascripts/app.js"></script>
+  <script src="app/javascripts/controllers/module.controller.js"></script>
   <script src="app/javascripts/controllers/Main.js"></script>
+  <script src="app/javascripts/controllers/Home.js"></script>
+  <script src="app/javascripts/controllers/Login.js"></script>
+
+  <script src="app/javascripts/services/module.service.js"></script>
+  <script src="app/javascripts/services/SessionService.js"></script>
+  <script src="app/javascripts/services/UserService.js"></script>
+
+  <script src="app/javascripts/app.js"></script>
   <!-- endbuild -->
 </body>
 </html>

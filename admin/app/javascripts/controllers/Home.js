@@ -3,11 +3,11 @@
 
   angular
     .module('tour.admin.controller')
-    .controller('MainController', MainController);
+    .controller('HomeController', HomeController);
 
-  MainController.$inject = ['$scope'];
+  HomeController.$inject = ['$scope'];
 
-  function MainController($scope) {
+  function HomeController($scope) {
     var vm = $scope;
 
   }
