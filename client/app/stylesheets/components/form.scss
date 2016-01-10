@@ -1,0 +1,25 @@
+.order-form {
+  padding: 0 $padding;
+  margin-top: $margin-lg;
+  font-size: $font-size-md;
+  .form {
+    background-color: $color-white;
+    border: 1px solid $border-color;
+    .form-row {
+      padding: $padding;
+      > label {
+        text-align: center;
+      }
+      > input {
+        width: 70%;
+      }
+    }
+    .form-input {
+      border: 1px solid $border-color;
+      padding: $padding;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

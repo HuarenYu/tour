@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tour')
+    .module('tour.client.controller')
     .controller('AboutController', AboutController);
 
   AboutController.$inject = ['$scope'];

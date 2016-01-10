@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tour')
+    .module('tour.client.controller')
     .controller('LandscapeListController', LandscapeListController);
 
   LandscapeListController.$inject = ['$scope'];

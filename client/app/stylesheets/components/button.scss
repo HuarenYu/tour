@@ -6,9 +6,16 @@
   border-radius: $padding/2;
   background-color: $color-white;
   border: 1px solid $border-color;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-primary {
   background-color: $color-brand;
   border: 1px solid darken($color-brand, 10%);
+}
+
+.btn-red {
+  background-color: $btn-color-red;
+  border: 1px solid darken($btn-color-red, 10%);
 }

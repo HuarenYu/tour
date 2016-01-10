@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tour')
+    .module('tour.client.controller')
     .controller('PostListController', PostListController);
 
   PostListController.$inject = ['$scope'];

@@ -9,13 +9,14 @@ $color-text-primary: lighten($color-text, 33.5%);
 $color-text-secondary: lighten($color-text, 46.7%);
 $color-text-hint: lighten($color-text, 93.5%);
 
-$color-bg-body: #eaeaea;
+$color-bg-body: #f5f5f5;;
 
 //font
 $font-size-xs: 12px;
 $font-size-sm: 14px;
 $font-size-md: 16px;
 $font-size-lg: 18px;
+$font-size-xlg: 20px;
 
 //icon
 $icon-color-white: #FFFFFF;
@@ -32,3 +33,4 @@ $margin-lg: 20px;
 
 //border
 $border-color: darken($color-bg-body, 10%);
+$btn-color-red: #ff7e82;

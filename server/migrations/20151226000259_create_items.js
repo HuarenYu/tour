@@ -4,9 +4,9 @@ exports.up = function(knex, Promise) {
     table.increments('id').primary();
     table.integer('owner_id');
     table.integer('location_id');
-    table.string('name');
-    table.float('price');
-    table.string('title');
+    table.string('name', 128);
+    table.string('captures', 1024);
+    table.decimal('price');
     table.string('desc');
     table.text('detail');
     table.timestamps();

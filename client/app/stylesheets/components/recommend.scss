@@ -1,0 +1,16 @@
+.recommend {
+  margin-top: $margin-lg;
+  background-color: #edefed;
+  .recommend-title {
+    text-align: center;
+    padding: $padding-lg;
+    > h1 {
+      margin: 0;
+    }
+    > p {
+      margin: 0;
+      margin-top: $margin;
+      font-size: $font-size-md;
+    }
+  }
+}

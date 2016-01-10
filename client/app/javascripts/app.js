@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('tour', ['ngRoute'])
-    .config(config);
+    .module('tour', ['ngRoute', 'tour.client.controller', 'tour.client.service'])
+    .config(config)
+    .run(run);
 
     config.$inject = ['$routeProvider', '$locationProvider'];
-
     function config($routeProvider, $locationProvider) {
       $routeProvider
         .when('/', {
@@ -41,9 +41,26 @@
           templateUrl: 'app/views/about.html',
           controller: 'AboutController'
         })
+        .when('/item/order/:id', {
+          templateUrl: 'app/views/order.html',
+          controller: 'OrderController'
+        })
         .otherwise({
           redirectTo: '/'
         });
       $locationProvider.html5Mode(true);
     }
+
+    run.$inject = ['$rootScope', 'AuthService'];
+    function run ($rootScope, AuthService) {
+      $rootScope.$on('$routeChangeStart', function (event, next, prev) {
+        /*
+        AuthService
+        .authorization(next.access)
+        .then()
+        .catch();
+        */
+      });
+    }
+
 }();

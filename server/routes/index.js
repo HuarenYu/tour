@@ -8,5 +8,6 @@ var authRoutes = require('./auth');
 router.use('/api/admin', adminRoutes);
 router.use('/api/client', clientRoutes);
 router.use('/api/auth', authRoutes);
+router.use('/api/item', require('./item'));
 
 module.exports = router;

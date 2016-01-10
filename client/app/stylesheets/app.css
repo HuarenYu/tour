@@ -34,7 +34,7 @@ html, body {
 
 body {
   color: #555555;
-  background-color: #eaeaea;
+  background-color: #f5f5f5;
   font-size: 12px; }
 
 .hairlines *[data-hairline="true"] {
@@ -101,7 +101,7 @@ body {
 .card {
   margin-top: 20px;
   background-color: #FFFFFF;
-  border: 1px solid #d1d1d1;
+  border: 1px solid gainsboro;
   border-left: none;
   border-right: none; }
   .card .card-header {
@@ -175,7 +175,8 @@ body {
   -webkit-transition: -webkit-transform .5s linear;
   transition: -webkit-transform .5s linear;
   transition: transform .5s linear;
-  transition: transform .5s linear, -webkit-transform .5s linear; }
+  transition: transform .5s linear, -webkit-transform .5s linear;
+  background-color: gainsboro; }
   .drawer-aside.open {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); }
@@ -201,10 +202,10 @@ body {
     padding: 0;
     list-style: none;
     background-color: #FFFFFF;
-    border-top: 1px solid #d1d1d1;
+    border-top: 1px solid gainsboro;
     margin-top: 20px; }
     .drawer-aside .aside-nav > ul > li {
-      border: 1px solid #d1d1d1;
+      border: 1px solid gainsboro;
       border-right: none;
       border-left: none;
       border-top: none; }
@@ -292,7 +293,7 @@ body {
   position: relative;
   background-color: #FFFFFF;
   height: 40px;
-  border-bottom: 1px solid #d1d1d1; }
+  border-bottom: 1px solid gainsboro; }
   .landscape-filter .landscape-current {
     padding-left: 10px; }
     .landscape-filter .landscape-current:after {
@@ -306,7 +307,7 @@ body {
         margin: 0 10px; }
     .landscape-filter .landscape-current .collapse-toggle {
       float: right;
-      border-left: 1px solid #d1d1d1; }
+      border-left: 1px solid gainsboro; }
       .landscape-filter .landscape-current .collapse-toggle .iconfont {
         line-height: 40px;
         padding: 0 10px;
@@ -327,13 +328,13 @@ body {
   width: 100%;
   background-color: #FFFFFF;
   z-index: 10;
-  border-bottom: 1px solid #d1d1d1; }
+  border-bottom: 1px solid gainsboro; }
   .landscape-all.open {
     display: block; }
   .landscape-all .top-locations {
     display: inline-block;
     width: 100px;
-    border-right: 1px solid #d1d1d1; }
+    border-right: 1px solid gainsboro; }
     .landscape-all .top-locations > ul {
       margin: 0;
       padding: 0;
@@ -342,7 +343,7 @@ body {
         padding: 10px;
         font-size: 16px;
         text-align: center;
-        border-bottom: 1px solid #d1d1d1; }
+        border-bottom: 1px solid gainsboro; }
         .landscape-all .top-locations > ul > li:last-child {
           border-bottom: none; }
   .landscape-all .sub-locations {
@@ -409,17 +410,17 @@ body {
 .landscape-detail .landscape-brief {
   padding: 10px;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #d1d1d1; }
+  border-bottom: 1px solid gainsboro; }
 
 .landscape-detail .landscape-item {
   margin-top: 20px;
   background-color: #FFFFFF;
-  border-top: 1px solid #d1d1d1;
-  border-bottom: 1px solid #d1d1d1; }
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro; }
   .landscape-detail .landscape-item .detail-title {
     padding: 10px;
     font-size: 16px;
-    border-bottom: 1px solid #d1d1d1; }
+    border-bottom: 1px solid gainsboro; }
   .landscape-detail .landscape-item .detail-content {
     padding: 10px; }
 
@@ -429,7 +430,7 @@ body {
   bottom: 0;
   width: 100%;
   background-color: #FFFFFF;
-  border-top: 1px solid #d1d1d1; }
+  border-top: 1px solid gainsboro; }
   .landscape-actions > .left,
   .landscape-actions .right {
     float: left;
@@ -448,11 +449,17 @@ body.landscape-detail {
   padding: 10px;
   border-radius: 5px;
   background-color: #FFFFFF;
-  border: 1px solid #d1d1d1; }
+  border: 1px solid gainsboro;
+  text-align: center;
+  text-decoration: none; }
 
 .btn-primary {
   background-color: #4CAF50;
   border: 1px solid #3d8b40; }
+
+.btn-red {
+  background-color: #ff7e82;
+  border: 1px solid #ff4b51; }
 
 .destination-list > ul {
   margin: 0;
@@ -494,3 +501,64 @@ body.landscape-detail {
           transform: translate(-50%, -50%);
           color: #FFFFFF;
           text-align: center; }
+
+.recommend {
+  margin-top: 20px;
+  background-color: #edefed; }
+  .recommend .recommend-title {
+    text-align: center;
+    padding: 20px; }
+    .recommend .recommend-title > h1 {
+      margin: 0; }
+    .recommend .recommend-title > p {
+      margin: 0;
+      margin-top: 10px;
+      font-size: 16px; }
+
+.item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF; }
+  .item .item-captures > img {
+    vertical-align: top;
+    width: 100%; }
+  .item .item-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .item .item-info > h1 {
+      margin: 0;
+      font-weight: bold; }
+    .item .item-info > h2 {
+      margin: 0;
+      font-weight: normal; }
+  .item .item-price {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.66); }
+
+.order-form {
+  padding: 0 10px;
+  margin-top: 20px;
+  font-size: 16px; }
+  .order-form .form {
+    background-color: #FFFFFF;
+    border: 1px solid gainsboro; }
+    .order-form .form .form-row {
+      padding: 10px; }
+      .order-form .form .form-row > label {
+        text-align: center; }
+      .order-form .form .form-row > input {
+        width: 70%; }
+    .order-form .form .form-input {
+      border: 1px solid gainsboro;
+      padding: 10px; }
+      .order-form .form .form-input:focus {
+        outline: none; }
